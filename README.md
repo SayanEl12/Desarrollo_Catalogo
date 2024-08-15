@@ -1,2 +1,2 @@
 # SoftDev
-Repository for revision and checking of activities in class
+Repository for review and checking of classroom activities

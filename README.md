@@ -1,7 +1,3 @@
-# SoftDev
-Repository for review and checking of classroom activities
+# Catalogo
 
-
-- [x] Modificacion
-- [ ] DEL **README**
-- [ ] CAMBIO EN LA NUBE
+desarrollo de proyecto de catologo para materia de desarrollo de software

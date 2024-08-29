@@ -1,14 +1,14 @@
 using System;
 
-public class Tipos_productos
+public class Tipos_producto
 {
     //Atributos
     protected int id = 0;
     protected string nombre = "";
 
     //Constructor
-    Tipos_productos() { }
-    Tipos_productos(int id, string nombre) 
+    Tipos_producto() { }
+    Tipos_producto(int id, string nombre) 
     {
         this.id = id;
         this.nombre = nombre;
@@ -49,23 +49,91 @@ public class Productos
 {
     //Atributos
     protected int id = 0;
-    protected string titulo = "";
-    protected DateTime fecha = DateTime.Now;
-
+    protected string codigo_producto = "";
+    protected string nombre_producto = "";
+    protected string descripcion = ""
+    protected float precio = 0.0f;
+    protected int stock = 0;
+    protected List<Tipos_producto> tipos_producto = null;
+    protected List<Fabricantes> fabricantes = null;
 
     //Constructor
     Productos() { }
-    Productos(int id, string nombre, string contacto)
+    Productos(int id, List<Tipos_producto> tipos_producto, string codigo_producto, string nombre_producto, string descripcion,
+        List<Fabricantes> fabricantes, float precio, int stock)
+    {
+        this.id = id;
+        this.tipos_producto = tipos_producto;
+        this.codigo_producto = codigo_producto;
+        this.nombre_producto = nombre_producto;
+        this.descripcion = descripcion;
+        this.fabricantes = fabricantes;
+        this.precio = precio;
+        this.stock = stock;
+    }
+
+    // Propiedades
+    public int Id { get => this.id; set => this.id = value; 
+    public string Codigo_producto { get => this.nombre_producto; set => this.nombre_producto = value; }
+    public string Descripcion { get => this.descripcion; set => this.descripcion = value; 
+    public float Precio{ get => this.precio; set => this.precio = value; }
+    public int stock{ get => this.stock; set => this.stock = value; }
+    public List<Tipos_producto> Tipos_producto { get => this.tipos_producto; set => this.tipos_producto = value; }
+    public List<Fabricantes> Fabricantes { get => this.fabricantes; set => this.fabricantes = value; }
+
+    // Metodos
+}
+
+public class Imagenes
+{
+    //Atributos
+    protected int id = 0;
+    protected string nombre = "";
+    protected string url = "";
+
+    //Constructor
+    Fabricantes() { }
+    Fabricantes(int id, string nombre, string url)
     {
         this.id = id;
         this.nombre = nombre;
-        this.contacto = contacto;
+        this.url = url;
     }
 
     // Propiedades
     public int Id { get => this.id; set => this.id = value; }
     public string Nombre { get => this.nombre; set => this.nombre = value; }
-    public string Contacto { get => this.contacto; set => this.contacto = value; }
+    public string Url { get => this.url; set => this.url = value; }
 
     // Metodos
 }
+
+public class Promociones
+{
+    //Atributos
+    protected int id = 0;
+    protected string nombre = "";
+    protected float descuento = 0.0f;
+    protected DateTime inicio = null;
+    protected DateTime final = null;
+
+    //Constructor
+    Fabricantes() { }
+    Fabricantes(int id, string nombre, float descuento, DateTime inicio, DateTime final)
+    {
+        this.id = id;
+        this.nombre = nombre;
+        this.descuento = descuento;
+        this.inicio = inicio;
+        this.final = final;
+    }
+
+    // Propiedades
+    public int Id { get => this.id; set => this.id = value; }
+    public string Nombre { get => this.nombre; set => this.nombre = value; }
+    public float Descuento { get => this.descuento; set => this.descuento = value; }
+    public Datetime Inicio { get => this.inicio; set => this.inicio = value; }
+    public Datetime Final { get => this.final; set => this.final= value; }
+    // Metodos
+}
+

@@ -1,177 +1,117 @@
 using System;
 
-public class Tipos_producto
+namespace ConsoleApp1
 {
-    //Atributos
-    protected int id = 0;
-    protected string nombre = "";
-
-    //Constructor
-    Tipos_producto() { }
-    Tipos_producto(int id, string nombre) 
+    public class Tipos_producto
     {
-        this.id = id;
-        this.nombre = nombre;
+        //Atributos
+        private int id = 0;
+        private string nombre = "";
+
+        // Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Nombre { get => this.nombre; set => this.nombre = value; }
+
+        // Metodos
     }
 
-    // Propiedades
-    public int Id { get => this.id; set => this.id = value; }
-    public string Nombre { get => this.nombre; set => this.nombre = value; }
-
-    // Metodos
-}
-
-public class Fabricantes
-{
-    //Atributos
-    protected int id = 0;
-    protected string nombre = "";
-    protected string contacto = "";
-
-    //Constructor
-    Fabricantes() { }
-    Fabricantes(int id, string nombre, string contacto)
+    public class Fabricantes
     {
-        this.id = id;
-        this.nombre = nombre;
-        this.contacto = contacto;
+        //Atributos
+        private int id = 0;
+        private string nombre = "";
+        private string contacto = "";
+
+        // Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Nombre { get => this.nombre; set => this.nombre = value; }
+        public string Contacto { get => this.contacto; set => this.contacto = value; }
+
+        // Metodos
     }
 
-    // Propiedades
-    public int Id { get => this.id; set => this.id = value; }
-    public string Nombre { get => this.nombre; set => this.nombre = value; }
-    public string Contacto { get => this.contacto; set => this.contacto = value; }
-
-    // Metodos
-}
-
-public class Productos
-{
-    //Atributos
-    protected int id = 0;
-    protected string codigo_producto = "";
-    protected string nombre_producto = "";
-    protected string descripcion = ""
-    protected float precio = 0.0f;
-    protected int stock = 0;
-    protected List<Tipos_producto> tipos_producto = null;
-    protected List<Fabricantes> fabricantes = null;
-
-    //Constructor
-    Productos() { }
-    Productos(int id, List<Tipos_producto> tipos_producto, string codigo_producto, string nombre_producto, string descripcion,
-        List<Fabricantes> fabricantes, float precio, int stock)
+    public class Productos
     {
-        this.id = id;
-        this.tipos_producto = tipos_producto;
-        this.codigo_producto = codigo_producto;
-        this.nombre_producto = nombre_producto;
-        this.descripcion = descripcion;
-        this.fabricantes = fabricantes;
-        this.precio = precio;
-        this.stock = stock;
+        //Atributos
+        private int id = 0;
+        private string codigo_producto = "";
+        private string nombre_producto = "";
+        private string descripcion = "";
+        private float precio = 0.0f;
+        private int stock = 0;
+        private Tipos_producto? tipo_producto = null;
+        private Fabricantes? fabricante = null;
+
+        // Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Codigo_producto { get => this.codigo_producto; set => this.codigo_producto = value; }
+        public string Nombre_producto { get => this.nombre_producto; set => this.nombre_producto = value; }
+        public string Descripcion { get => this.descripcion; set => this.descripcion = value; }
+        public float Precio { get => this.precio; set => this.precio = value; }
+        public int Stock { get => this.stock; set => this.stock = value; }
+        public Tipos_producto? Tipo_producto { get => this.tipo_producto; set => this.tipo_producto = value; }
+        public Fabricantes? Fabricante { get => this.fabricante; set => this.fabricante = value; }
+
+        // Metodos
     }
 
-    // Propiedades
-    public int Id { get => this.id; set => this.id = value; 
-    public string Codigo_producto { get => this.nombre_producto; set => this.nombre_producto = value; }
-    public string Descripcion { get => this.descripcion; set => this.descripcion = value; 
-    public float Precio{ get => this.precio; set => this.precio = value; }
-    public int stock{ get => this.stock; set => this.stock = value; }
-    public List<Tipos_producto> Tipos_producto { get => this.tipos_producto; set => this.tipos_producto = value; }
-    public List<Fabricantes> Fabricantes { get => this.fabricantes; set => this.fabricantes = value; }
-
-    // Metodos
-}
-public class Paginas
-{
-    //Atributos
-    protected int id = 0;
-    protected string titulo = "";
-    protected DateTime fecha = null;
-    protected float Costo = 0.0 f;
-    protected string ciudad = "";
-    protected List <Productos> productos = null;
-    protected List <Imagenes> imagenes = null;
-    protected List <Promociones> promociones = null;
-
-    //Constructor
-    Paginas() { }
-    Paginas(int id, List<Productos> productos, List<Imagenes> imagenes, string titulo, DateTime fecha, float costo,
-        string ciudad, List<Promociones> promociones)
+    public class Imagenes
     {
-        this.id = id;
-        this.productos = productos;
-        this.imagenes = imagenes;
-        this.titulo = titulo;
-        this.fecha = fecha;
-        this.costo = costo;
-        this.ciudad = ciudad;
-        this.promociones = promociones;
-    }
-    //Propiedades
-    public int Id { get => this.id; set => this.id = value; }
-    public string titulo {get => this.titulo; set => this.titulo = value; }
-    public DateTime fecha {get => this.fecha; set => this.fecha = value;
-    public float costo { get => this.costo; set => this.costo = value; }
-    public string ciudad { get => this.ciudad; set => this.ciudad = value; }
-    public List<Productos> productos { get => this.productos; set => this.productos = value; }
-    public List<Imagenes> imagenes { get => this.imagenes; set => this.imagenes = value; }
-    public List<Promociones> promociones { get => this.promociones; set => this.promociones = value; }
-    //Metodos
-}
+        //Atributos
+        private int id = 0;
+        private string nombre = "";
+        private string url = "";
 
+        // Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Nombre { get => this.nombre; set => this.nombre = value; }
+        public string Url { get => this.url; set => this.url = value; }
 
-public class Imagenes
-{
-    //Atributos
-    protected int id = 0;
-    protected string nombre = "";
-    protected string url = "";
-
-    //Constructor
-    Fabricantes() { }
-    Fabricantes(int id, string nombre, string url)
-    {
-        this.id = id;
-        this.nombre = nombre;
-        this.url = url;
+        // Metodos
     }
 
-    // Propiedades
-    public int Id { get => this.id; set => this.id = value; }
-    public string Nombre { get => this.nombre; set => this.nombre = value; }
-    public string Url { get => this.url; set => this.url = value; }
-
-    // Metodos
-}
-
-public class Promociones
-{
-    //Atributos
-    protected int id = 0;
-    protected string nombre = "";
-    protected float descuento = 0.0f;
-    protected DateTime inicio = null;
-    protected DateTime final = null;
-
-    //Constructor
-    Fabricantes() { }
-    Fabricantes(int id, string nombre, float descuento, DateTime inicio, DateTime final)
+    public class Promociones
     {
-        this.id = id;
-        this.nombre = nombre;
-        this.descuento = descuento;
-        this.inicio = inicio;
-        this.final = final;
+        //Atributos
+        private int id = 0;
+        private string nombre = "";
+        private float descuento = 0.0f;
+        private DateTime? inicio = null;
+        private DateTime? final = null;
+
+        // Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Nombre { get => this.nombre; set => this.nombre = value; }
+        public float Descuento { get => this.descuento; set => this.descuento = value; }
+        public DateTime? Inicio { get => this.inicio; set => this.inicio = value; }
+        public DateTime? Final { get => this.final; set => this.final = value; }
+
+        // Metodos
     }
 
-    // Propiedades
-    public int Id { get => this.id; set => this.id = value; }
-    public string Nombre { get => this.nombre; set => this.nombre = value; }
-    public float Descuento { get => this.descuento; set => this.descuento = value; }
-    public Datetime Inicio { get => this.inicio; set => this.inicio = value; }
-    public Datetime Final { get => this.final; set => this.final= value; }
-    // Metodos
-}
+    public class Paginas
+    {
+        //Atributos
+        protected int id = 0;
+        protected string titulo = "";
+        protected DateTime? fecha = null;
+        protected float costo = 0.0f;
+        protected string ciudad = "";
+        protected Productos? producto = null;
+        protected Imagenes? imagen = null;
+        protected Promociones? promocion = null;
 
+        //Propiedades
+        public int Id { get => this.id; set => this.id = value; }
+        public string Titulo { get => this.titulo; set => this.titulo = value; }
+        public DateTime? Fecha { get => this.fecha; set => this.fecha = value; }
+        public float Costo { get => this.costo; set => this.costo = value; }
+        public string Ciudad { get => this.ciudad; set => this.ciudad = value; }
+        public Productos? Producto { get => this.producto; set => this.producto = value; }
+        public Imagenes? Imagen { get => this.imagen; set => this.imagen = value; }
+        public Promociones? Promocion { get => this.promocion; set => this.promocion = value; }
+
+        //Metodos
+    }
+
+}

@@ -83,6 +83,44 @@ public class Productos
 
     // Metodos
 }
+public class Paginas
+{
+    //Atributos
+    protected int id = 0;
+    protected string titulo = "";
+    protected DateTime fecha = null;
+    protected float Costo = 0.0 f;
+    protected string ciudad = "";
+    protected List <Productos> productos = null;
+    protected List <Imagenes> imagenes = null;
+    protected List <Promociones> promociones = null;
+
+    //Constructor
+    Paginas() { }
+    Paginas(int id, List<Productos> productos, List<Imagenes> imagenes, string titulo, DateTime fecha, float costo,
+        string ciudad, List<Promociones> promociones)
+    {
+        this.id = id;
+        this.productos = productos;
+        this.imagenes = imagenes;
+        this.titulo = titulo;
+        this.fecha = fecha;
+        this.costo = costo;
+        this.ciudad = ciudad;
+        this.promociones = promociones;
+    }
+    //Propiedades
+    public int Id { get => this.id; set => this.id = value; }
+    public string titulo {get => this.titulo; set => this.titulo = value; }
+    public DateTime fecha {get => this.fecha; set => this.fecha = value;
+    public float costo { get => this.costo; set => this.costo = value; }
+    public string ciudad { get => this.ciudad; set => this.ciudad = value; }
+    public List<Productos> productos { get => this.productos; set => this.productos = value; }
+    public List<Imagenes> imagenes { get => this.imagenes; set => this.imagenes = value; }
+    public List<Promociones> promociones { get => this.promociones; set => this.promociones = value; }
+    //Metodos
+}
+
 
 public class Imagenes
 {

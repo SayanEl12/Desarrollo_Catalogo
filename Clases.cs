@@ -112,6 +112,9 @@ namespace ConsoleApp1
         public Promociones? Promocion { get => this.promocion; set => this.promocion = value; }
 
         //Metodos
+        public void añadir_pagina();
+        public void editar_pagina();
+        public void eliminar_pagina();
     }
 
 }
